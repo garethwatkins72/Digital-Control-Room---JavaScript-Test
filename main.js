@@ -6,6 +6,7 @@ const svg = d3.select("svg")
   .attr("width", width)
   .attr("height", height);
 
+// listen for user selection and build chart
 form.addEventListener('change', function(e) {
   const selectedButton = e.target;
 
