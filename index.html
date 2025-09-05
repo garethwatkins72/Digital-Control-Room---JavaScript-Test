@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>Digital Control Room - JavaScript Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
 
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet"
   />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body class="bg-light p-4">
@@ -19,25 +21,25 @@
       
       <h3>By Country:</h3>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="displayType" id="populationSize">
+        <input class="form-check-input" type="radio" name="displayType" id="populationSize" value="populationSize">
         <label class="form-check-label" for="populationSize">
           Population Size
         </label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="displayType" id="noBorders">
+        <input class="form-check-input" type="radio" name="displayType" id="noBorders" value="noBorders" >
         <label class="form-check-label" for="noBorders">
           Number of Borders
         </label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="displayType" id="noTimezones">
+        <input class="form-check-input" type="radio" name="displayType" id="noTimezones" value="noTimezones" >
         <label class="form-check-label" for="noTimezones">
           Number of Timezones
         </label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="displayType" id="noLanguages">
+        <input class="form-check-input" type="radio" name="displayType" id="noLanguages" value="noLanguages" >
         <label class="form-check-label" for="noLanguages">
           Number of Languages
         </label>
@@ -45,13 +47,13 @@
 
       <h3>By Region:</h3>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="displayType" id="noCountriesRegion">
+        <input class="form-check-input" type="radio" name="displayType" id="noCountriesRegion" value="noCountriesRegion" >
         <label class="form-check-label" for="noCountriesRegion">
           Number of Countries in the Region
         </label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="displayType" id="noTimezonesRegion">
+        <input class="form-check-input" type="radio" name="displayType" id="noTimezonesRegion" value="noTimezonesRegion" >
         <label class="form-check-label" for="noTimezonesRegion">
           Number of Unique Timezones in the Region
         </label>
@@ -59,7 +61,9 @@
 
     </form>
 
+    <svg width="800" height="600"></svg>
+
   </div>
-  <script src="main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
